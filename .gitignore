@@ -1,0 +1,17 @@
+# Ignorar a pasta de metadados do Visual Studio
+.vs/
+
+# Ignorar as pastas de compilação
+bin/
+obj/
+
+# Ignorar arquivos de configuração do usuário específicos do Visual Studio
+*.user
+*.userosscache
+*.suo
+
+# Ignorar a pasta de pacotes NuGet
+packages/
+
+# Ignorar arquivos de log de compilação
+*.log
