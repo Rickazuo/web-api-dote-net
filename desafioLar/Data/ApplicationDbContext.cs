@@ -17,10 +17,13 @@ namespace desafioLar.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            // Configuração da relação um-para-muitos entre Pessoa e Telefone
             modelBuilder.Entity<Pessoa>()
-                .HasMany(p => p.Telefones)
-                .WithOne(t => t.Pessoa)
-                .HasForeignKey(t => t.PessoaId);
+                .HasMany(p => p.Telefones) // Pessoa tem muitos Telefones
+                .WithOne(t => t.Pessoa)    // Telefone tem uma Pessoa
+                .HasForeignKey(t => t.PessoaId); // Com uma chave estrangeira PessoaId em Telefone
+               // .OnDelete(DeleteBehavior.Cascade); // Configura o comportamento de exclusão em cascata
         }
+
     }
 }

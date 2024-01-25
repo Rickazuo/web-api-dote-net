@@ -1,4 +1,6 @@
-﻿namespace desafioLar.Models
+﻿using System.Text.Json.Serialization;
+
+namespace desafioLar.Models
 {
     public class Telefone
     {
@@ -8,6 +10,7 @@
 
         public int PessoaId { get; set; }
 
-        //public Pessoa Pessoa { get; set;}
+        [JsonIgnore]
+        public Pessoa? Pessoa { get; set; }
     }
 }
