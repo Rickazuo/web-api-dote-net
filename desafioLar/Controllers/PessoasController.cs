@@ -31,19 +31,26 @@ namespace desafioLar.Controllers
         }
 
 
-        // GET: api/Pessoas/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Pessoa>> GetPessoa(int id)
+        // GET: api/Pessoas/{nome}
+        [HttpGet("{nome}")]
+        public async Task<ActionResult<IEnumerable<Pessoa>>> GetPessoasByNome(string nome)
         {
-            var pessoa = await _context.Pessoas.FindAsync(id);
+            var pessoas = await _context.Pessoas
+                                        .Where(p => p.Nome.Contains(nome)) // Filtra pessoas pelo nome
+                                        .Include(p => p.Telefones) // Inclui os telefones relacionados
+                                        .ToListAsync();
 
-            if (pessoa == null)
+            if (!pessoas.Any())
             {
                 return NotFound();
             }
 
-            return pessoa;
+            return pessoas;
         }
+
+
+
+
 
         // PUT: api/Pessoas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
