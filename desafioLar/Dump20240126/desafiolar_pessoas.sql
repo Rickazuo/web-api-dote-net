@@ -1,0 +1,54 @@
+-- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
+--
+-- Host: localhost    Database: desafiolar
+-- ------------------------------------------------------
+-- Server version	8.0.36
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `pessoas`
+--
+
+DROP TABLE IF EXISTS `pessoas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `pessoas` (
+  `PessoaId` int NOT NULL AUTO_INCREMENT,
+  `Nome` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `CPF` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `DataDeNascimento` datetime(6) NOT NULL,
+  `EstaAtivo` tinyint(1) NOT NULL,
+  PRIMARY KEY (`PessoaId`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pessoas`
+--
+
+LOCK TABLES `pessoas` WRITE;
+/*!40000 ALTER TABLE `pessoas` DISABLE KEYS */;
+INSERT INTO `pessoas` VALUES (1,'João Silva','123.456.789-09','1990-05-21 00:00:00.000000',1),(2,'Maria Oliveira','987.654.321-00','1985-08-15 00:00:00.000000',1),(3,'Ana Santos','111.222.333-44','1992-07-19 00:00:00.000000',1),(4,'Pedro Costa','555.666.777-88','1988-03-11 00:00:00.000000',1),(5,'Lucas Souza','999.888.777-66','1975-01-29 00:00:00.000000',1),(6,'Patrícia Almeida','222.333.444-55','2000-12-12 00:00:00.000000',1),(7,'Carlos Eduardo','666.555.444-33','1978-06-24 00:00:00.000000',1),(8,'Fernanda Lima','444.555.666-22','1986-09-30 00:00:00.000000',1),(9,'Rafaela Machado','333.777.888-99','1995-04-05 00:00:00.000000',1),(10,'Marcos Andrade','888.999.000-11','1983-02-17 00:00:00.000000',1),(11,'Sandra Gomes','777.666.555-22','1998-08-25 00:00:00.000000',1),(12,'Roberto Souza','555.444.333-11','1980-11-30 00:00:00.000000',1),(13,'Juliana Martins','123.123.456-78','1974-10-04 00:00:00.000000',1),(20,'Rodrigo Carvalho','321.987.654-00','1990-01-01 00:00:00.000000',1);
+/*!40000 ALTER TABLE `pessoas` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-01-26 21:50:51
