@@ -1,4 +1,4 @@
-## Projeto DesafioLar
+
 
 ## Descrição
 Projeto de back-end desenvolvido com .NET Core 8 para gerenciamento de entidades `Pessoas` e `Telefones` em um banco de dados MySQL, onde uma `Pessoa` pode ter vários `Telefones` associados.
